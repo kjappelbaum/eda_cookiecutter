@@ -8,3 +8,8 @@ This cookiecutter is inspired by the [Cookiecutter for Data Science](https://dri
 * creates automatically a conda enviornment for the project with a lot of useful packages. Note that we use the CPU version of Tensorflow as the GPU version is a bit annoying to install
 * useful directory structure 
 
+## To be added 
+
+* DS unittests with [marbles](https://github.com/twosigma/marbles)
+* `.json` or `.yaml` templates to save experiment parameters 
+* Data science version control with [DVC](https://dvc.org/)
