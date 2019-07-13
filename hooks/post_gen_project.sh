@@ -4,7 +4,7 @@ project_name="{{ cookiecutter.project_name }}"
 env_name="ml-$project_name"
 
 conda env create --file environment.yml
-source activate "$env_name"
+conda activate "$env_name"
 
 python -m ipykernel install --user --name "$env_name" --display-name "Python ($env_name)"
 
@@ -50,6 +50,13 @@ git add .
 git commit -m "initial setup"
 git remote add origin git@github.com:$username/$repo_name.git > /dev/null 2>&1
 git push -u origin master > /dev/null 2>&1
+dvc init
+if [ "$data_dir" = "" ]; then
+    echo "Do not know data dir, add data to datadir and run dvc add manually"
+    invalid_credentials=1
+fi
 echo "Done!"
+
+
 
 
