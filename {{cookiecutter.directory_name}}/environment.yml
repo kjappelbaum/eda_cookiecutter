@@ -16,5 +16,5 @@ dependencies:
     - edward
     - dvc
     - matminer
-    -
+    - csvkit
 
